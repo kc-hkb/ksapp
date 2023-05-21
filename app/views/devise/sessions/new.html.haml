@@ -1,0 +1,21 @@
+.container
+
+  = image_tag 'rectangle.png', class: 'login_img'
+
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .field
+      = f.label :email
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+    .field
+      = f.label :password
+      %br/
+      = f.password_field :password, autocomplete: "current-password"
+
+    .actions.loginBtn
+      = f.submit "Log in"
+
+
+
+
+
